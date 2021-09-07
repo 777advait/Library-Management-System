@@ -25,8 +25,10 @@ class Library():
 
     def displayBook(self): # displays available books
         print("Books available at our store\n")
+        x = 1 # book serial number
         for books in self.book_list:
-            print("[ ]" + books)
+            print(f"[{x}]" + books)
+            x += 1
     
     def returnBook(self, reader, book):
         self.lend_dict.pop(reader, book)
